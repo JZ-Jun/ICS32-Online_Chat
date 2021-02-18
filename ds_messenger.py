@@ -18,3 +18,7 @@ class DirectMessenger:
     def retrieve_all(self) -> list:
         pass
 
+<<<<<<<<< Temporary merge branch 1
+print("Hello World test test test using pycharm")
+=========
+>>>>>>>>> Temporary merge branch 2
