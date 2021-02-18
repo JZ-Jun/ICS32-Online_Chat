@@ -18,4 +18,3 @@ class DirectMessenger:
     def retrieve_all(self) -> list:
         pass
 
-print("Hello World test test test using pycharm")
