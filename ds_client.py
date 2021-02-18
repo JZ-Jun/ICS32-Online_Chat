@@ -30,5 +30,5 @@ def verify(server: str, port: int, username: str, password: str):
 
 
 # send("168.235.86.101", 2021, "Jun", "password123", "Hahaha", "I am Issac")
-def test()
-   send("168.235.86.101", 2021, "Jun", "password123", "Hahaha", "I am Issac")
+def test():
+    send("168.235.86.101", 2021, "Jun", "password123", "Hahaha", "I am Issac")
