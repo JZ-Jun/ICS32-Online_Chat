@@ -34,3 +34,4 @@ def test():
     send("168.235.86.101", 2021, "Jun", "password123", "Hahaha", "I am Issac")
     print("create testing branch")
     print("merge to main")
+    print("main branch")
