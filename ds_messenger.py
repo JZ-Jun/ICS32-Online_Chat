@@ -88,6 +88,8 @@ class DirectMessenger:
             dm.set_time(msgs["timestamp"])
 
             response_list.append(dm)
+	
+	self.disconnect()
         return response_list
             
         
@@ -113,6 +115,8 @@ class DirectMessenger:
             dm.set_time(msgs["timestamp"])
 
             response_list.append(dm)
+	
+	self.disconnect()
         return response_list
         
 
