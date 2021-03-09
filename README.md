@@ -10,6 +10,8 @@ Our main entry point [GUI code] is main.py
 > The additional class is popupWindow inside the main.py\
 > The custom exception is DSUProtocolError inside ds_messenger.py
 
+*Note* you can edit the user on line 178 in main.py
+
 Work Cited
 ----------
 "Is there a way to make the Tkinter text widget read only?" 
