@@ -163,11 +163,17 @@ class DirectMessenger:
         resp = self.f_recv.readline()[:-1]
 
         resp_msg = json.loads(resp)
-        print(resp_msg)
+       
+	#prints response to the console
+        if "message" in self.resp_msg["response"]:
+            print(self.resp_msg["response"]["message"])
+        elif len(self.resp_msg["response"]["messages"]) > 1:
+            print(self.resp_msg["response"]["messages"][-1], '...')
+        else:
+            print(self.resp_msg["response"]["messages"])
 
         if resp_msg["response"]["type"] == 'error':
-
-            print(resp_msg["response"]["message"])
+            #print(resp_msg["response"]["message"])
             self.disconnect()
             raise DSUProtocolError
         else:
