@@ -21,7 +21,8 @@ class Body(tk.Frame):
     def node_select(self, event):
         #adds new messages received every time a user clicks on another user (kind of like a refresh)
         if self.messages != self.messages + self.directMessenger.retrieve_new():
-            self.messages += self.directMessenger.retrieve_new()
+            self.messages = self.directMessenger.retrieve_all()
+            print('retrieving new')
         
         if self.user_tree.selection():
             index = int(self.user_tree.selection()[0])-1
