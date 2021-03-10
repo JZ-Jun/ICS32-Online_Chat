@@ -3,7 +3,7 @@
 # Tkinter Program used to create a GUI for ICS 32 Direct Messenger
 # Final Project
 #
-# Authors: Carlos Lim, Isaac Jun Zhu
+# Authors: Carlos Lim, Jun Zhu
 # 17 March 2021
 
 import tkinter as tk
