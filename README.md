@@ -1,4 +1,4 @@
-Carlos Lim & Isaac Jun Zhu\
+Carlos Lim & Jun Zhu\
 Team: Chris P Bacon\
 ICS 32 Baldwin\
 17 March, 2021
