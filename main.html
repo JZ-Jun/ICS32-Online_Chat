@@ -1,0 +1,1156 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1" />
+<meta name="generator" content="pdoc 0.9.2" />
+<title>main API documentation</title>
+<meta name="description" content="" />
+<link rel="preload stylesheet" as="style" href="https://cdnjs.cloudflare.com/ajax/libs/10up-sanitize.css/11.0.1/sanitize.min.css" integrity="sha256-PK9q560IAAa6WVRRh76LtCaI8pjTJ2z11v0miyNNjrs=" crossorigin>
+<link rel="preload stylesheet" as="style" href="https://cdnjs.cloudflare.com/ajax/libs/10up-sanitize.css/11.0.1/typography.min.css" integrity="sha256-7l/o7C8jubJiy74VsKTidCy1yBkRtiUGbVkYBylBqUg=" crossorigin>
+<link rel="stylesheet preload" as="style" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/10.1.1/styles/github.min.css" crossorigin>
+<style>:root{--highlight-color:#fe9}.flex{display:flex !important}body{line-height:1.5em}#content{padding:20px}#sidebar{padding:30px;overflow:hidden}#sidebar > *:last-child{margin-bottom:2cm}.http-server-breadcrumbs{font-size:130%;margin:0 0 15px 0}#footer{font-size:.75em;padding:5px 30px;border-top:1px solid #ddd;text-align:right}#footer p{margin:0 0 0 1em;display:inline-block}#footer p:last-child{margin-right:30px}h1,h2,h3,h4,h5{font-weight:300}h1{font-size:2.5em;line-height:1.1em}h2{font-size:1.75em;margin:1em 0 .50em 0}h3{font-size:1.4em;margin:25px 0 10px 0}h4{margin:0;font-size:105%}h1:target,h2:target,h3:target,h4:target,h5:target,h6:target{background:var(--highlight-color);padding:.2em 0}a{color:#058;text-decoration:none;transition:color .3s ease-in-out}a:hover{color:#e82}.title code{font-weight:bold}h2[id^="header-"]{margin-top:2em}.ident{color:#900}pre code{background:#f8f8f8;font-size:.8em;line-height:1.4em}code{background:#f2f2f1;padding:1px 4px;overflow-wrap:break-word}h1 code{background:transparent}pre{background:#f8f8f8;border:0;border-top:1px solid #ccc;border-bottom:1px solid #ccc;margin:1em 0;padding:1ex}#http-server-module-list{display:flex;flex-flow:column}#http-server-module-list div{display:flex}#http-server-module-list dt{min-width:10%}#http-server-module-list p{margin-top:0}.toc ul,#index{list-style-type:none;margin:0;padding:0}#index code{background:transparent}#index h3{border-bottom:1px solid #ddd}#index ul{padding:0}#index h4{margin-top:.6em;font-weight:bold}@media (min-width:200ex){#index .two-column{column-count:2}}@media (min-width:300ex){#index .two-column{column-count:3}}dl{margin-bottom:2em}dl dl:last-child{margin-bottom:4em}dd{margin:0 0 1em 3em}#header-classes + dl > dd{margin-bottom:3em}dd dd{margin-left:2em}dd p{margin:10px 0}.name{background:#eee;font-weight:bold;font-size:.85em;padding:5px 10px;display:inline-block;min-width:40%}.name:hover{background:#e0e0e0}dt:target .name{background:var(--highlight-color)}.name > span:first-child{white-space:nowrap}.name.class > span:nth-child(2){margin-left:.4em}.inherited{color:#999;border-left:5px solid #eee;padding-left:1em}.inheritance em{font-style:normal;font-weight:bold}.desc h2{font-weight:400;font-size:1.25em}.desc h3{font-size:1em}.desc dt code{background:inherit}.source summary,.git-link-div{color:#666;text-align:right;font-weight:400;font-size:.8em;text-transform:uppercase}.source summary > *{white-space:nowrap;cursor:pointer}.git-link{color:inherit;margin-left:1em}.source pre{max-height:500px;overflow:auto;margin:0}.source pre code{font-size:12px;overflow:visible}.hlist{list-style:none}.hlist li{display:inline}.hlist li:after{content:',\2002'}.hlist li:last-child:after{content:none}.hlist .hlist{display:inline;padding-left:1em}img{max-width:100%}td{padding:0 .5em}.admonition{padding:.1em .5em;margin-bottom:1em}.admonition-title{font-weight:bold}.admonition.note,.admonition.info,.admonition.important{background:#aef}.admonition.todo,.admonition.versionadded,.admonition.tip,.admonition.hint{background:#dfd}.admonition.warning,.admonition.versionchanged,.admonition.deprecated{background:#fd4}.admonition.error,.admonition.danger,.admonition.caution{background:lightpink}</style>
+<style media="screen and (min-width: 700px)">@media screen and (min-width:700px){#sidebar{width:30%;height:100vh;overflow:auto;position:sticky;top:0}#content{width:70%;max-width:100ch;padding:3em 4em;border-left:1px solid #ddd}pre code{font-size:1em}.item .name{font-size:1em}main{display:flex;flex-direction:row-reverse;justify-content:flex-end}.toc ul ul,#index ul{padding-left:1.5em}.toc > ul > li{margin-top:.5em}}</style>
+<style media="print">@media print{#sidebar h1{page-break-before:always}.source{display:none}}@media print{*{background:transparent !important;color:#000 !important;box-shadow:none !important;text-shadow:none !important}a[href]:after{content:" (" attr(href) ")";font-size:90%}a[href][title]:after{content:none}abbr[title]:after{content:" (" attr(title) ")"}.ir a:after,a[href^="javascript:"]:after,a[href^="#"]:after{content:""}pre,blockquote{border:1px solid #999;page-break-inside:avoid}thead{display:table-header-group}tr,img{page-break-inside:avoid}img{max-width:100% !important}@page{margin:0.5cm}p,h2,h3{orphans:3;widows:3}h1,h2,h3,h4,h5,h6{page-break-after:avoid}}</style>
+<script defer src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/10.1.1/highlight.min.js" integrity="sha256-Uv3H6lx7dJmRfRvH8TH6kJD1TSK1aFcwgx+mdg3epi8=" crossorigin></script>
+<script>window.addEventListener('DOMContentLoaded', () => hljs.initHighlighting())</script>
+</head>
+<body>
+<main>
+<article id="content">
+<header>
+<h1 class="title">Module <code>main</code></h1>
+</header>
+<section id="section-intro">
+<details class="source">
+<summary>
+<span>Expand source code</span>
+</summary>
+<pre><code class="python"># main.py
+#
+# Tkinter Program used to create a GUI for ICS 32 Direct Messenger
+# Final Project
+#
+# Authors: Carlos Lim, Isaac Jun Zhu
+# 17 March 2021
+
+import tkinter as tk
+from tkinter import ttk, filedialog, messagebox
+from ds_messenger import *
+
+
+class Body(tk.Frame):
+    &#34;&#34;&#34;
+    A subclass of tk.Frame that is responsible for drawing all of the widgets
+    in the body portion of the root frame.
+    &#34;&#34;&#34;
+    def __init__(self, root, directMessenger=None):
+        &#34;&#34;&#34;
+        Constructs all the necessary attributes for Body object.
+
+        :param root: tk.Menu
+        :param directMessenger: DirectMessenger object created by MainApp
+        :type root: tk.main.root
+        :type directMessenger: DirectMessenger object
+        &#34;&#34;&#34;
+        tk.Frame.__init__(self, root)
+        self.root = root
+        self.directMessenger = directMessenger
+        #determines if there is a sender (uses to send message)
+        self.sender = None
+        #retrieves all the messages
+        self.messages = self.directMessenger.retrieve_all()
+        #list of users to populate the tree
+        self._users = []
+        self._draw()
+        self.set_users()
+
+
+    def node_select(self, event) -&gt; None:
+        &#34;&#34;&#34;
+        Updates the message_frame with all the messages from self.sender when
+        the corresponding node is selected.
+
+        :param event: not used
+        &#34;&#34;&#34;
+        #adds new messages received every time a user clicks on another user (kind of like a refresh)
+        if self.messages != self.messages + self.directMessenger.retrieve_new():
+            self.messages = self.directMessenger.retrieve_all()
+            print(&#39;retrieving new...&#39;)
+    
+        if self.user_tree.selection():
+            #selections are not 0-based, so subtarct one.
+            index = int(self.user_tree.selection()[0])-1
+            self.sender = self._users[index]
+            #empties the main message frame for senders messages (via populate_msg)
+            self.reset_main()
+            self.populate_msg(self.sender)
+
+    def populate_msg(self, user:str) -&gt; None:
+        &#34;&#34;&#34;
+        Populates the messages_frame with all the messages from that user.
+
+        :param user: person clicked on by node_select
+        :type user: str
+        &#34;&#34;&#34;
+        #configures message_frame to &#39;normal&#39; so we can edit the Text frame
+        self.message_frame.configure(state=&#39;normal&#39;)
+        
+        for dm1 in self.messages:
+            if dm1.get_recipient() == user:
+                self.message_frame.insert(&#39;end&#39;, dm1.get_message() + &#39;\n&#39;)
+        self.message_frame.configure(state=&#39;disabled&#39;)
+
+
+    def reset_main(self) -&gt; None:
+        &#34;&#34;&#34;
+        Resets the main_frame for another user&#39;s direct messages.
+        &#34;&#34;&#34;
+        self.message_frame.configure(state=&#39;normal&#39;)
+        #deletes all the text in the message_frame
+        self.message_frame.delete(&#39;1.0&#39;, &#39;end&#39;)
+        self.message_frame.configure(state=&#39;disabled&#39;)
+
+
+    def get_text_entry(self) -&gt; str:
+        &#34;&#34;&#34;
+        Getter method that returns the text in entry_editor (this is where you send msgs from).
+
+        :return: the text currently displayed in the entry_editor widget
+        :rtype: str
+        &#34;&#34;&#34;
+        return self.entry_editor.get(&#39;1.0&#39;, &#39;end&#39;).rstrip()
+
+
+    def set_text_entry(self, text:str) -&gt; None:
+        &#34;&#34;&#34;
+        Sets the text to be displayed in teh entry_editor widget
+
+        :param text: string of entry
+        :type text: str
+
+        .. note:: This method is usefull for clearing the widget
+        &#34;&#34;&#34;
+        self.entry_editor.delete(&#39;1.0&#39;, &#39;end&#39;)
+        self.entry_editor.insert(&#39;1.0&#39;, text)
+
+
+    def set_users(self) -&gt; None:
+        &#34;&#34;&#34;
+        Sets the user into the user_tree.
+        &#34;&#34;&#34;
+        for dm in self.messages:
+            if dm.get_recipient() not in self._users:
+                self.insert_user(dm.get_recipient())
+
+
+    def insert_user(self, user:str) -&gt; None:
+        &#34;&#34;&#34;
+        Inserts the user into the user_tree.
+
+        :param user: individual recipient received from set_user
+        :type user: str
+        &#34;&#34;&#34;
+        self._users.append(user)
+        self._insert_user_tree(len(self._users), user)
+
+        
+    def _insert_user_tree(self, id, user:str) -&gt; None:
+        &#34;&#34;&#34;
+        Inserts a user into the user_tree widget.
+
+        :param id: length of ._users list (for next insert)
+        :param user: individual recipient received from insert_user
+        :type user: str
+        :type id: int
+        &#34;&#34;&#34;
+        shortenName = user
+        #shortens the name if the name length is too long
+        if len(shortenName) &gt; 25:
+            shortenName = user[:24] + &#34;...&#34;
+
+        self.user_tree.insert(&#39;&#39;, id, id, text=shortenName)
+
+
+    def _draw(self):
+        &#34;&#34;&#34;
+        Call only once upon initialization to add widgets to the frame.
+        &#34;&#34;&#34;
+        users_frame = tk.Frame(master=self, width=250)
+        users_frame.pack(fill=tk.BOTH, side=tk.LEFT)
+        #Tree widget
+        self.user_tree = ttk.Treeview(users_frame)
+        self.user_tree.bind(&#34;&lt;&lt;TreeviewSelect&gt;&gt;&#34;, self.node_select)
+        self.user_tree.pack(fill=tk.BOTH, side=tk.TOP, expand=True, padx=5, pady=5)
+
+        #main widget
+        main_frame = tk.Frame(master=self, bg=&#34;white&#34;)
+        main_frame.pack(fill=tk.BOTH, side=tk.TOP, expand=True)
+
+        #message frame for all the messages received from certain user (based on node_select)
+        self.message_frame = tk.Text(main_frame, width=0, state=&#39;disabled&#39;)
+        self.message_frame.pack(fill=tk.BOTH, side=tk.LEFT, expand=True, padx=0, pady=0)
+
+        editor_frame = tk.Frame(master=self, bg=&#34;&#34;, height=100)
+        editor_frame.pack_propagate(0)
+        editor_frame.pack(fill=tk.BOTH, side=tk.BOTTOM, expand=False)
+
+        #for the editing frame
+        scroll_frame = tk.Frame(master=editor_frame, bg=&#34;&#34;, width=10)
+        scroll_frame.pack(fill=tk.BOTH, side=tk.RIGHT, expand=False)
+
+        #for message frame
+        scroll_frame2 = tk.Frame(master=main_frame, bg=&#34;&#34;, width=10)
+        scroll_frame2.pack(fill=tk.BOTH, side=tk.RIGHT, expand=False)
+        # frame for writing messages to send to node_selected user
+        self.entry_editor = tk.Text(editor_frame, width=0)
+        self.entry_editor.pack(fill=tk.BOTH, side=tk.LEFT, expand=True, padx=0, pady=0)
+
+        entry_editor_scrollbar = tk.Scrollbar(master=scroll_frame, command=self.entry_editor.yview)
+        self.entry_editor[&#39;yscrollcommand&#39;] = entry_editor_scrollbar.set
+        entry_editor_scrollbar.pack(fill=tk.Y, side=tk.LEFT, expand=False, padx=0, pady=0)
+
+        message_scrollbar = tk.Scrollbar(master=scroll_frame2, command=self.message_frame.yview)
+        self.message_frame[&#39;yscrollcommand&#39;] = message_scrollbar.set
+        message_scrollbar.pack(fill=tk.Y, side=tk.LEFT, expand=False, padx=0, pady=0)
+    
+
+class Footer(tk.Frame):
+    &#34;&#34;&#34;
+    A subclass of tk.Frame that is responsible for drawing all of the widgets
+    in the foorer portion of the root frame.
+    &#34;&#34;&#34;
+    def __init__(self, root, addUser_callback=None, send_callback=None):
+        &#34;&#34;&#34;
+        Constructs all the necessary attributes for Footer object.
+
+        :param root: master root from MainApp
+        :param addUser_callback: Calls the callback function specified in addUser_callback
+        :param send_callback: Calls the callback function specified in send_callback
+        :type root: tk.Menu
+        :type addUser_callback: function
+        :type send_callback: function
+        &#34;&#34;&#34;
+        tk.Frame.__init__(self, root)
+        self.root = root
+        self._addUser_callback = addUser_callback
+        self._send_callback = send_callback
+        #packs widgets into the Footer instance
+        self._draw()
+
+
+    def add_click(self) -&gt; None:
+        &#34;&#34;&#34;
+        Calls the callback function specified in add_click class attribute, if
+        available, when add user button has been clicked.
+        &#34;&#34;&#34;
+        if self._addUser_callback is not None:
+            self._addUser_callback()
+
+
+    def send_click(self) -&gt; None:
+        &#34;&#34;&#34;
+        Calls the callback function specified in the send_click attribute, if
+        available, when the send button has been clicked.
+        &#34;&#34;&#34;
+        if self._send_callback is not None:
+            self._send_callback()
+
+
+    def _draw(self):
+        &#34;&#34;&#34;
+        Call only once upon initialization to add widgets to the frame.
+        &#34;&#34;&#34;
+        #send button
+        send_button = tk.Button(master=self, text=&#34;Send&#34;, width=10)
+        send_button.configure(command=self.send_click)
+        send_button.pack(fill=tk.BOTH, side=tk.RIGHT, padx=5, pady=5)
+
+        #add user button
+        self.new_user = tk.Button(master=self, text=&#34;Add User&#34;, width=10)
+        self.new_user.configure(command=self.add_click)
+        self.new_user.pack(fill=tk.BOTH, side=tk.LEFT, padx=5, pady=5)
+
+
+class popupWindow:
+    &#34;&#34;&#34;
+    The popupWindow class generates a Toplevel pop-up window that allows
+    users to add new people to direct message.
+    &#34;&#34;&#34;
+    def __init__(self, root):
+        &#34;&#34;&#34;
+        Constructs all the necessary attributes for popupWindow object
+
+        :param root: master root from MainApp
+        :type root: tk.main.root
+        &#34;&#34;&#34;
+        window = self.window = tk.Toplevel(root)
+        self.l = tk.Label(window, text=&#34;Add User&#34;)
+        self.l.pack()
+        #entry allows people to enter new user
+        self.e = tk.Entry(window)
+        self.e.pack()
+        self.b = tk.Button(window, text=&#34;Ok&#34;, command=self.cleanup)
+        self.b.pack()
+        self.value = None
+
+
+    def cleanup(self) -&gt; None:
+        &#34;&#34;&#34;
+        Destroy&#39;s popupWindow once the person clicks &#34;Ok&#34;
+        &#34;&#34;&#34;
+        if self.e is not None:
+            self.value = self.e.get()
+        self.window.destroy()
+        
+
+class MainApp(tk.Frame):
+    &#34;&#34;&#34;
+    A subclass of tk.Frame that is responsible for drawing all of the widgets
+    in the main portion of the root frame. Also manages all the method calls
+    for DirectMessenger class.
+    &#34;&#34;&#34;
+    def __init__(self, root):
+        &#34;&#34;&#34;
+        :param root: master root for MainApp
+        :type root: tk.main.root
+        &#34;&#34;&#34;
+        tk.Frame.__init__(self, root)
+        self.root = root
+        #ensure that person is able to connect before packing (drawing all the widgets)
+        try:
+            self.dm = DirectMessenger(&#39;168.235.86.101&#39;, &#39;abigail9009&#39;, &#39;123&#39;)
+            self._draw()
+        except DSUProtocolError as dse:
+            print(&#39;sorry mate, looks like ya broke it :)&#39;)
+            self._errorMessage() #pop-up window telling user the error from server.
+
+
+    def add_user(self) -&gt; None:
+        &#34;&#34;&#34;
+        Adds users to the window. This is triggered by clicking the &#34;Add user&#34; button
+        on the GUI.
+        &#34;&#34;&#34;
+        #popup is prompted
+        self.w = popupWindow(self.root)
+        self.footer.new_user.configure(state=&#39;disabled&#39;)
+        self.root.wait_window(self.w.window)
+        self.footer.new_user.configure(state=&#39;normal&#39;)
+
+        if self.w.value is not None:
+            self.body.insert_user(self.w.value)
+
+        
+    def send_message(self) -&gt; None:
+        &#34;&#34;&#34;
+        Sends message to the server (received from self.body.entry_editor).
+        &#34;&#34;&#34;
+        if self.body.sender is not None: #makes sure a node is selected (recipient)
+            message = self.body.get_text_entry()
+            if not self.dm.send(message, self.body.sender):
+                self._errorMessage() #pop-up window telling user the error from server.
+            
+
+    def _errorMessage(self) -&gt; None:
+        &#34;&#34;&#34;
+        Generates a messagebox form the server telling user the error that occured.
+        &#34;&#34;&#34;
+        messagebox.showinfo(title=&#39;Heads up&#39;, message=self.dm.resp_msg[&#34;response&#34;][&#34;message&#34;])
+            
+
+    def _draw(self):
+        &#34;&#34;&#34;
+        Call only once, upon initialization to add widgets to root frame.
+        &#34;&#34;&#34;
+        #The Body and Footer classes must be initialized and packed into root window.
+        self.body = Body(self.root, self.dm)
+        self.body.pack(fill=tk.BOTH, side=tk.TOP, expand=True)
+
+        self.footer = Footer(self.root, addUser_callback=self.add_user, send_callback=self.send_message)
+        self.footer.pack(fill=tk.BOTH, side=tk.BOTTOM)
+
+
+if __name__ == &#34;__main__&#34;:
+    # Root window and title
+    main = tk.Tk()
+    main.title(&#34;ICS 32 Messenger&#34;)
+
+    # Starting default size
+    main.geometry(&#34;600x500&#34;)
+    main.option_add(&#39;*tearOff&#39;, False)
+
+    # Initialize the MainApp class, which is the starting point for the widgets used in the program.
+    # All of the classes that we use, subclass Tk.Frame, since our root frame is main, we initialize 
+    # the class with it.
+    MainApp(main)
+    main.update()
+
+    # minsize prevents the root window from resizing too small. Feel free to comment it out and see how
+    # the resizing behavior of the window changes.
+    main.minsize(main.winfo_width(), main.winfo_height())
+    main.mainloop()</code></pre>
+</details>
+</section>
+<section>
+</section>
+<section>
+</section>
+<section>
+</section>
+<section>
+<h2 class="section-title" id="header-classes">Classes</h2>
+<dl>
+<dt id="main.Body"><code class="flex name class">
+<span>class <span class="ident">Body</span></span>
+<span>(</span><span>root, directMessenger=None)</span>
+</code></dt>
+<dd>
+<div class="desc"><p>A subclass of tk.Frame that is responsible for drawing all of the widgets
+in the body portion of the root frame.</p>
+<p>Constructs all the necessary attributes for Body object.</p>
+<p>:param root: tk.Menu
+:param directMessenger: DirectMessenger object created by MainApp
+:type root: tk.main.root
+:type directMessenger: DirectMessenger object</p></div>
+<details class="source">
+<summary>
+<span>Expand source code</span>
+</summary>
+<pre><code class="python">class Body(tk.Frame):
+    &#34;&#34;&#34;
+    A subclass of tk.Frame that is responsible for drawing all of the widgets
+    in the body portion of the root frame.
+    &#34;&#34;&#34;
+    def __init__(self, root, directMessenger=None):
+        &#34;&#34;&#34;
+        Constructs all the necessary attributes for Body object.
+
+        :param root: tk.Menu
+        :param directMessenger: DirectMessenger object created by MainApp
+        :type root: tk.main.root
+        :type directMessenger: DirectMessenger object
+        &#34;&#34;&#34;
+        tk.Frame.__init__(self, root)
+        self.root = root
+        self.directMessenger = directMessenger
+        #determines if there is a sender (uses to send message)
+        self.sender = None
+        #retrieves all the messages
+        self.messages = self.directMessenger.retrieve_all()
+        #list of users to populate the tree
+        self._users = []
+        self._draw()
+        self.set_users()
+
+
+    def node_select(self, event) -&gt; None:
+        &#34;&#34;&#34;
+        Updates the message_frame with all the messages from self.sender when
+        the corresponding node is selected.
+
+        :param event: not used
+        &#34;&#34;&#34;
+        #adds new messages received every time a user clicks on another user (kind of like a refresh)
+        if self.messages != self.messages + self.directMessenger.retrieve_new():
+            self.messages = self.directMessenger.retrieve_all()
+            print(&#39;retrieving new...&#39;)
+    
+        if self.user_tree.selection():
+            #selections are not 0-based, so subtarct one.
+            index = int(self.user_tree.selection()[0])-1
+            self.sender = self._users[index]
+            #empties the main message frame for senders messages (via populate_msg)
+            self.reset_main()
+            self.populate_msg(self.sender)
+
+    def populate_msg(self, user:str) -&gt; None:
+        &#34;&#34;&#34;
+        Populates the messages_frame with all the messages from that user.
+
+        :param user: person clicked on by node_select
+        :type user: str
+        &#34;&#34;&#34;
+        #configures message_frame to &#39;normal&#39; so we can edit the Text frame
+        self.message_frame.configure(state=&#39;normal&#39;)
+        
+        for dm1 in self.messages:
+            if dm1.get_recipient() == user:
+                self.message_frame.insert(&#39;end&#39;, dm1.get_message() + &#39;\n&#39;)
+        self.message_frame.configure(state=&#39;disabled&#39;)
+
+
+    def reset_main(self) -&gt; None:
+        &#34;&#34;&#34;
+        Resets the main_frame for another user&#39;s direct messages.
+        &#34;&#34;&#34;
+        self.message_frame.configure(state=&#39;normal&#39;)
+        #deletes all the text in the message_frame
+        self.message_frame.delete(&#39;1.0&#39;, &#39;end&#39;)
+        self.message_frame.configure(state=&#39;disabled&#39;)
+
+
+    def get_text_entry(self) -&gt; str:
+        &#34;&#34;&#34;
+        Getter method that returns the text in entry_editor (this is where you send msgs from).
+
+        :return: the text currently displayed in the entry_editor widget
+        :rtype: str
+        &#34;&#34;&#34;
+        return self.entry_editor.get(&#39;1.0&#39;, &#39;end&#39;).rstrip()
+
+
+    def set_text_entry(self, text:str) -&gt; None:
+        &#34;&#34;&#34;
+        Sets the text to be displayed in teh entry_editor widget
+
+        :param text: string of entry
+        :type text: str
+
+        .. note:: This method is usefull for clearing the widget
+        &#34;&#34;&#34;
+        self.entry_editor.delete(&#39;1.0&#39;, &#39;end&#39;)
+        self.entry_editor.insert(&#39;1.0&#39;, text)
+
+
+    def set_users(self) -&gt; None:
+        &#34;&#34;&#34;
+        Sets the user into the user_tree.
+        &#34;&#34;&#34;
+        for dm in self.messages:
+            if dm.get_recipient() not in self._users:
+                self.insert_user(dm.get_recipient())
+
+
+    def insert_user(self, user:str) -&gt; None:
+        &#34;&#34;&#34;
+        Inserts the user into the user_tree.
+
+        :param user: individual recipient received from set_user
+        :type user: str
+        &#34;&#34;&#34;
+        self._users.append(user)
+        self._insert_user_tree(len(self._users), user)
+
+        
+    def _insert_user_tree(self, id, user:str) -&gt; None:
+        &#34;&#34;&#34;
+        Inserts a user into the user_tree widget.
+
+        :param id: length of ._users list (for next insert)
+        :param user: individual recipient received from insert_user
+        :type user: str
+        :type id: int
+        &#34;&#34;&#34;
+        shortenName = user
+        #shortens the name if the name length is too long
+        if len(shortenName) &gt; 25:
+            shortenName = user[:24] + &#34;...&#34;
+
+        self.user_tree.insert(&#39;&#39;, id, id, text=shortenName)
+
+
+    def _draw(self):
+        &#34;&#34;&#34;
+        Call only once upon initialization to add widgets to the frame.
+        &#34;&#34;&#34;
+        users_frame = tk.Frame(master=self, width=250)
+        users_frame.pack(fill=tk.BOTH, side=tk.LEFT)
+        #Tree widget
+        self.user_tree = ttk.Treeview(users_frame)
+        self.user_tree.bind(&#34;&lt;&lt;TreeviewSelect&gt;&gt;&#34;, self.node_select)
+        self.user_tree.pack(fill=tk.BOTH, side=tk.TOP, expand=True, padx=5, pady=5)
+
+        #main widget
+        main_frame = tk.Frame(master=self, bg=&#34;white&#34;)
+        main_frame.pack(fill=tk.BOTH, side=tk.TOP, expand=True)
+
+        #message frame for all the messages received from certain user (based on node_select)
+        self.message_frame = tk.Text(main_frame, width=0, state=&#39;disabled&#39;)
+        self.message_frame.pack(fill=tk.BOTH, side=tk.LEFT, expand=True, padx=0, pady=0)
+
+        editor_frame = tk.Frame(master=self, bg=&#34;&#34;, height=100)
+        editor_frame.pack_propagate(0)
+        editor_frame.pack(fill=tk.BOTH, side=tk.BOTTOM, expand=False)
+
+        #for the editing frame
+        scroll_frame = tk.Frame(master=editor_frame, bg=&#34;&#34;, width=10)
+        scroll_frame.pack(fill=tk.BOTH, side=tk.RIGHT, expand=False)
+
+        #for message frame
+        scroll_frame2 = tk.Frame(master=main_frame, bg=&#34;&#34;, width=10)
+        scroll_frame2.pack(fill=tk.BOTH, side=tk.RIGHT, expand=False)
+        # frame for writing messages to send to node_selected user
+        self.entry_editor = tk.Text(editor_frame, width=0)
+        self.entry_editor.pack(fill=tk.BOTH, side=tk.LEFT, expand=True, padx=0, pady=0)
+
+        entry_editor_scrollbar = tk.Scrollbar(master=scroll_frame, command=self.entry_editor.yview)
+        self.entry_editor[&#39;yscrollcommand&#39;] = entry_editor_scrollbar.set
+        entry_editor_scrollbar.pack(fill=tk.Y, side=tk.LEFT, expand=False, padx=0, pady=0)
+
+        message_scrollbar = tk.Scrollbar(master=scroll_frame2, command=self.message_frame.yview)
+        self.message_frame[&#39;yscrollcommand&#39;] = message_scrollbar.set
+        message_scrollbar.pack(fill=tk.Y, side=tk.LEFT, expand=False, padx=0, pady=0)</code></pre>
+</details>
+<h3>Ancestors</h3>
+<ul class="hlist">
+<li>tkinter.Frame</li>
+<li>tkinter.Widget</li>
+<li>tkinter.BaseWidget</li>
+<li>tkinter.Misc</li>
+<li>tkinter.Pack</li>
+<li>tkinter.Place</li>
+<li>tkinter.Grid</li>
+</ul>
+<h3>Methods</h3>
+<dl>
+<dt id="main.Body.get_text_entry"><code class="name flex">
+<span>def <span class="ident">get_text_entry</span></span>(<span>self) ‑> str</span>
+</code></dt>
+<dd>
+<div class="desc"><p>Getter method that returns the text in entry_editor (this is where you send msgs from).</p>
+<p>:return: the text currently displayed in the entry_editor widget
+:rtype: str</p></div>
+<details class="source">
+<summary>
+<span>Expand source code</span>
+</summary>
+<pre><code class="python">def get_text_entry(self) -&gt; str:
+    &#34;&#34;&#34;
+    Getter method that returns the text in entry_editor (this is where you send msgs from).
+
+    :return: the text currently displayed in the entry_editor widget
+    :rtype: str
+    &#34;&#34;&#34;
+    return self.entry_editor.get(&#39;1.0&#39;, &#39;end&#39;).rstrip()</code></pre>
+</details>
+</dd>
+<dt id="main.Body.insert_user"><code class="name flex">
+<span>def <span class="ident">insert_user</span></span>(<span>self, user: str) ‑> NoneType</span>
+</code></dt>
+<dd>
+<div class="desc"><p>Inserts the user into the user_tree.</p>
+<p>:param user: individual recipient received from set_user
+:type user: str</p></div>
+<details class="source">
+<summary>
+<span>Expand source code</span>
+</summary>
+<pre><code class="python">def insert_user(self, user:str) -&gt; None:
+    &#34;&#34;&#34;
+    Inserts the user into the user_tree.
+
+    :param user: individual recipient received from set_user
+    :type user: str
+    &#34;&#34;&#34;
+    self._users.append(user)
+    self._insert_user_tree(len(self._users), user)</code></pre>
+</details>
+</dd>
+<dt id="main.Body.node_select"><code class="name flex">
+<span>def <span class="ident">node_select</span></span>(<span>self, event) ‑> NoneType</span>
+</code></dt>
+<dd>
+<div class="desc"><p>Updates the message_frame with all the messages from self.sender when
+the corresponding node is selected.</p>
+<p>:param event: not used</p></div>
+<details class="source">
+<summary>
+<span>Expand source code</span>
+</summary>
+<pre><code class="python">def node_select(self, event) -&gt; None:
+    &#34;&#34;&#34;
+    Updates the message_frame with all the messages from self.sender when
+    the corresponding node is selected.
+
+    :param event: not used
+    &#34;&#34;&#34;
+    #adds new messages received every time a user clicks on another user (kind of like a refresh)
+    if self.messages != self.messages + self.directMessenger.retrieve_new():
+        self.messages = self.directMessenger.retrieve_all()
+        print(&#39;retrieving new...&#39;)
+
+    if self.user_tree.selection():
+        #selections are not 0-based, so subtarct one.
+        index = int(self.user_tree.selection()[0])-1
+        self.sender = self._users[index]
+        #empties the main message frame for senders messages (via populate_msg)
+        self.reset_main()
+        self.populate_msg(self.sender)</code></pre>
+</details>
+</dd>
+<dt id="main.Body.populate_msg"><code class="name flex">
+<span>def <span class="ident">populate_msg</span></span>(<span>self, user: str) ‑> NoneType</span>
+</code></dt>
+<dd>
+<div class="desc"><p>Populates the messages_frame with all the messages from that user.</p>
+<p>:param user: person clicked on by node_select
+:type user: str</p></div>
+<details class="source">
+<summary>
+<span>Expand source code</span>
+</summary>
+<pre><code class="python">def populate_msg(self, user:str) -&gt; None:
+    &#34;&#34;&#34;
+    Populates the messages_frame with all the messages from that user.
+
+    :param user: person clicked on by node_select
+    :type user: str
+    &#34;&#34;&#34;
+    #configures message_frame to &#39;normal&#39; so we can edit the Text frame
+    self.message_frame.configure(state=&#39;normal&#39;)
+    
+    for dm1 in self.messages:
+        if dm1.get_recipient() == user:
+            self.message_frame.insert(&#39;end&#39;, dm1.get_message() + &#39;\n&#39;)
+    self.message_frame.configure(state=&#39;disabled&#39;)</code></pre>
+</details>
+</dd>
+<dt id="main.Body.reset_main"><code class="name flex">
+<span>def <span class="ident">reset_main</span></span>(<span>self) ‑> NoneType</span>
+</code></dt>
+<dd>
+<div class="desc"><p>Resets the main_frame for another user's direct messages.</p></div>
+<details class="source">
+<summary>
+<span>Expand source code</span>
+</summary>
+<pre><code class="python">def reset_main(self) -&gt; None:
+    &#34;&#34;&#34;
+    Resets the main_frame for another user&#39;s direct messages.
+    &#34;&#34;&#34;
+    self.message_frame.configure(state=&#39;normal&#39;)
+    #deletes all the text in the message_frame
+    self.message_frame.delete(&#39;1.0&#39;, &#39;end&#39;)
+    self.message_frame.configure(state=&#39;disabled&#39;)</code></pre>
+</details>
+</dd>
+<dt id="main.Body.set_text_entry"><code class="name flex">
+<span>def <span class="ident">set_text_entry</span></span>(<span>self, text: str) ‑> NoneType</span>
+</code></dt>
+<dd>
+<div class="desc"><p>Sets the text to be displayed in teh entry_editor widget</p>
+<p>:param text: string of entry
+:type text: str</p>
+<div class="admonition note">
+<p class="admonition-title">Note:&ensp;This method is usefull for clearing the widget</p>
+</div></div>
+<details class="source">
+<summary>
+<span>Expand source code</span>
+</summary>
+<pre><code class="python">def set_text_entry(self, text:str) -&gt; None:
+    &#34;&#34;&#34;
+    Sets the text to be displayed in teh entry_editor widget
+
+    :param text: string of entry
+    :type text: str
+
+    .. note:: This method is usefull for clearing the widget
+    &#34;&#34;&#34;
+    self.entry_editor.delete(&#39;1.0&#39;, &#39;end&#39;)
+    self.entry_editor.insert(&#39;1.0&#39;, text)</code></pre>
+</details>
+</dd>
+<dt id="main.Body.set_users"><code class="name flex">
+<span>def <span class="ident">set_users</span></span>(<span>self) ‑> NoneType</span>
+</code></dt>
+<dd>
+<div class="desc"><p>Sets the user into the user_tree.</p></div>
+<details class="source">
+<summary>
+<span>Expand source code</span>
+</summary>
+<pre><code class="python">def set_users(self) -&gt; None:
+    &#34;&#34;&#34;
+    Sets the user into the user_tree.
+    &#34;&#34;&#34;
+    for dm in self.messages:
+        if dm.get_recipient() not in self._users:
+            self.insert_user(dm.get_recipient())</code></pre>
+</details>
+</dd>
+</dl>
+</dd>
+<dt id="main.Footer"><code class="flex name class">
+<span>class <span class="ident">Footer</span></span>
+<span>(</span><span>root, addUser_callback=None, send_callback=None)</span>
+</code></dt>
+<dd>
+<div class="desc"><p>A subclass of tk.Frame that is responsible for drawing all of the widgets
+in the foorer portion of the root frame.</p>
+<p>Constructs all the necessary attributes for Footer object.</p>
+<p>:param root: master root from MainApp
+:param addUser_callback: Calls the callback function specified in addUser_callback
+:param send_callback: Calls the callback function specified in send_callback
+:type root: tk.Menu
+:type addUser_callback: function
+:type send_callback: function</p></div>
+<details class="source">
+<summary>
+<span>Expand source code</span>
+</summary>
+<pre><code class="python">class Footer(tk.Frame):
+    &#34;&#34;&#34;
+    A subclass of tk.Frame that is responsible for drawing all of the widgets
+    in the foorer portion of the root frame.
+    &#34;&#34;&#34;
+    def __init__(self, root, addUser_callback=None, send_callback=None):
+        &#34;&#34;&#34;
+        Constructs all the necessary attributes for Footer object.
+
+        :param root: master root from MainApp
+        :param addUser_callback: Calls the callback function specified in addUser_callback
+        :param send_callback: Calls the callback function specified in send_callback
+        :type root: tk.Menu
+        :type addUser_callback: function
+        :type send_callback: function
+        &#34;&#34;&#34;
+        tk.Frame.__init__(self, root)
+        self.root = root
+        self._addUser_callback = addUser_callback
+        self._send_callback = send_callback
+        #packs widgets into the Footer instance
+        self._draw()
+
+
+    def add_click(self) -&gt; None:
+        &#34;&#34;&#34;
+        Calls the callback function specified in add_click class attribute, if
+        available, when add user button has been clicked.
+        &#34;&#34;&#34;
+        if self._addUser_callback is not None:
+            self._addUser_callback()
+
+
+    def send_click(self) -&gt; None:
+        &#34;&#34;&#34;
+        Calls the callback function specified in the send_click attribute, if
+        available, when the send button has been clicked.
+        &#34;&#34;&#34;
+        if self._send_callback is not None:
+            self._send_callback()
+
+
+    def _draw(self):
+        &#34;&#34;&#34;
+        Call only once upon initialization to add widgets to the frame.
+        &#34;&#34;&#34;
+        #send button
+        send_button = tk.Button(master=self, text=&#34;Send&#34;, width=10)
+        send_button.configure(command=self.send_click)
+        send_button.pack(fill=tk.BOTH, side=tk.RIGHT, padx=5, pady=5)
+
+        #add user button
+        self.new_user = tk.Button(master=self, text=&#34;Add User&#34;, width=10)
+        self.new_user.configure(command=self.add_click)
+        self.new_user.pack(fill=tk.BOTH, side=tk.LEFT, padx=5, pady=5)</code></pre>
+</details>
+<h3>Ancestors</h3>
+<ul class="hlist">
+<li>tkinter.Frame</li>
+<li>tkinter.Widget</li>
+<li>tkinter.BaseWidget</li>
+<li>tkinter.Misc</li>
+<li>tkinter.Pack</li>
+<li>tkinter.Place</li>
+<li>tkinter.Grid</li>
+</ul>
+<h3>Methods</h3>
+<dl>
+<dt id="main.Footer.add_click"><code class="name flex">
+<span>def <span class="ident">add_click</span></span>(<span>self) ‑> NoneType</span>
+</code></dt>
+<dd>
+<div class="desc"><p>Calls the callback function specified in add_click class attribute, if
+available, when add user button has been clicked.</p></div>
+<details class="source">
+<summary>
+<span>Expand source code</span>
+</summary>
+<pre><code class="python">def add_click(self) -&gt; None:
+    &#34;&#34;&#34;
+    Calls the callback function specified in add_click class attribute, if
+    available, when add user button has been clicked.
+    &#34;&#34;&#34;
+    if self._addUser_callback is not None:
+        self._addUser_callback()</code></pre>
+</details>
+</dd>
+<dt id="main.Footer.send_click"><code class="name flex">
+<span>def <span class="ident">send_click</span></span>(<span>self) ‑> NoneType</span>
+</code></dt>
+<dd>
+<div class="desc"><p>Calls the callback function specified in the send_click attribute, if
+available, when the send button has been clicked.</p></div>
+<details class="source">
+<summary>
+<span>Expand source code</span>
+</summary>
+<pre><code class="python">def send_click(self) -&gt; None:
+    &#34;&#34;&#34;
+    Calls the callback function specified in the send_click attribute, if
+    available, when the send button has been clicked.
+    &#34;&#34;&#34;
+    if self._send_callback is not None:
+        self._send_callback()</code></pre>
+</details>
+</dd>
+</dl>
+</dd>
+<dt id="main.MainApp"><code class="flex name class">
+<span>class <span class="ident">MainApp</span></span>
+<span>(</span><span>root)</span>
+</code></dt>
+<dd>
+<div class="desc"><p>A subclass of tk.Frame that is responsible for drawing all of the widgets
+in the main portion of the root frame. Also manages all the method calls
+for DirectMessenger class.</p>
+<p>:param root: master root for MainApp
+:type root: tk.main.root</p></div>
+<details class="source">
+<summary>
+<span>Expand source code</span>
+</summary>
+<pre><code class="python">class MainApp(tk.Frame):
+    &#34;&#34;&#34;
+    A subclass of tk.Frame that is responsible for drawing all of the widgets
+    in the main portion of the root frame. Also manages all the method calls
+    for DirectMessenger class.
+    &#34;&#34;&#34;
+    def __init__(self, root):
+        &#34;&#34;&#34;
+        :param root: master root for MainApp
+        :type root: tk.main.root
+        &#34;&#34;&#34;
+        tk.Frame.__init__(self, root)
+        self.root = root
+        #ensure that person is able to connect before packing (drawing all the widgets)
+        try:
+            self.dm = DirectMessenger(&#39;168.235.86.101&#39;, &#39;abigail9009&#39;, &#39;123&#39;)
+            self._draw()
+        except DSUProtocolError as dse:
+            print(&#39;sorry mate, looks like ya broke it :)&#39;)
+            self._errorMessage() #pop-up window telling user the error from server.
+
+
+    def add_user(self) -&gt; None:
+        &#34;&#34;&#34;
+        Adds users to the window. This is triggered by clicking the &#34;Add user&#34; button
+        on the GUI.
+        &#34;&#34;&#34;
+        #popup is prompted
+        self.w = popupWindow(self.root)
+        self.footer.new_user.configure(state=&#39;disabled&#39;)
+        self.root.wait_window(self.w.window)
+        self.footer.new_user.configure(state=&#39;normal&#39;)
+
+        if self.w.value is not None:
+            self.body.insert_user(self.w.value)
+
+        
+    def send_message(self) -&gt; None:
+        &#34;&#34;&#34;
+        Sends message to the server (received from self.body.entry_editor).
+        &#34;&#34;&#34;
+        if self.body.sender is not None: #makes sure a node is selected (recipient)
+            message = self.body.get_text_entry()
+            if not self.dm.send(message, self.body.sender):
+                self._errorMessage() #pop-up window telling user the error from server.
+            
+
+    def _errorMessage(self) -&gt; None:
+        &#34;&#34;&#34;
+        Generates a messagebox form the server telling user the error that occured.
+        &#34;&#34;&#34;
+        messagebox.showinfo(title=&#39;Heads up&#39;, message=self.dm.resp_msg[&#34;response&#34;][&#34;message&#34;])
+            
+
+    def _draw(self):
+        &#34;&#34;&#34;
+        Call only once, upon initialization to add widgets to root frame.
+        &#34;&#34;&#34;
+        #The Body and Footer classes must be initialized and packed into root window.
+        self.body = Body(self.root, self.dm)
+        self.body.pack(fill=tk.BOTH, side=tk.TOP, expand=True)
+
+        self.footer = Footer(self.root, addUser_callback=self.add_user, send_callback=self.send_message)
+        self.footer.pack(fill=tk.BOTH, side=tk.BOTTOM)</code></pre>
+</details>
+<h3>Ancestors</h3>
+<ul class="hlist">
+<li>tkinter.Frame</li>
+<li>tkinter.Widget</li>
+<li>tkinter.BaseWidget</li>
+<li>tkinter.Misc</li>
+<li>tkinter.Pack</li>
+<li>tkinter.Place</li>
+<li>tkinter.Grid</li>
+</ul>
+<h3>Methods</h3>
+<dl>
+<dt id="main.MainApp.add_user"><code class="name flex">
+<span>def <span class="ident">add_user</span></span>(<span>self) ‑> NoneType</span>
+</code></dt>
+<dd>
+<div class="desc"><p>Adds users to the window. This is triggered by clicking the "Add user" button
+on the GUI.</p></div>
+<details class="source">
+<summary>
+<span>Expand source code</span>
+</summary>
+<pre><code class="python">def add_user(self) -&gt; None:
+    &#34;&#34;&#34;
+    Adds users to the window. This is triggered by clicking the &#34;Add user&#34; button
+    on the GUI.
+    &#34;&#34;&#34;
+    #popup is prompted
+    self.w = popupWindow(self.root)
+    self.footer.new_user.configure(state=&#39;disabled&#39;)
+    self.root.wait_window(self.w.window)
+    self.footer.new_user.configure(state=&#39;normal&#39;)
+
+    if self.w.value is not None:
+        self.body.insert_user(self.w.value)</code></pre>
+</details>
+</dd>
+<dt id="main.MainApp.send_message"><code class="name flex">
+<span>def <span class="ident">send_message</span></span>(<span>self) ‑> NoneType</span>
+</code></dt>
+<dd>
+<div class="desc"><p>Sends message to the server (received from self.body.entry_editor).</p></div>
+<details class="source">
+<summary>
+<span>Expand source code</span>
+</summary>
+<pre><code class="python">def send_message(self) -&gt; None:
+    &#34;&#34;&#34;
+    Sends message to the server (received from self.body.entry_editor).
+    &#34;&#34;&#34;
+    if self.body.sender is not None: #makes sure a node is selected (recipient)
+        message = self.body.get_text_entry()
+        if not self.dm.send(message, self.body.sender):
+            self._errorMessage() #pop-up window telling user the error from server.</code></pre>
+</details>
+</dd>
+</dl>
+</dd>
+<dt id="main.popupWindow"><code class="flex name class">
+<span>class <span class="ident">popupWindow</span></span>
+<span>(</span><span>root)</span>
+</code></dt>
+<dd>
+<div class="desc"><p>The popupWindow class generates a Toplevel pop-up window that allows
+users to add new people to direct message.</p>
+<p>Constructs all the necessary attributes for popupWindow object</p>
+<p>:param root: master root from MainApp
+:type root: tk.main.root</p></div>
+<details class="source">
+<summary>
+<span>Expand source code</span>
+</summary>
+<pre><code class="python">class popupWindow:
+    &#34;&#34;&#34;
+    The popupWindow class generates a Toplevel pop-up window that allows
+    users to add new people to direct message.
+    &#34;&#34;&#34;
+    def __init__(self, root):
+        &#34;&#34;&#34;
+        Constructs all the necessary attributes for popupWindow object
+
+        :param root: master root from MainApp
+        :type root: tk.main.root
+        &#34;&#34;&#34;
+        window = self.window = tk.Toplevel(root)
+        self.l = tk.Label(window, text=&#34;Add User&#34;)
+        self.l.pack()
+        #entry allows people to enter new user
+        self.e = tk.Entry(window)
+        self.e.pack()
+        self.b = tk.Button(window, text=&#34;Ok&#34;, command=self.cleanup)
+        self.b.pack()
+        self.value = None
+
+
+    def cleanup(self) -&gt; None:
+        &#34;&#34;&#34;
+        Destroy&#39;s popupWindow once the person clicks &#34;Ok&#34;
+        &#34;&#34;&#34;
+        if self.e is not None:
+            self.value = self.e.get()
+        self.window.destroy()</code></pre>
+</details>
+<h3>Methods</h3>
+<dl>
+<dt id="main.popupWindow.cleanup"><code class="name flex">
+<span>def <span class="ident">cleanup</span></span>(<span>self) ‑> NoneType</span>
+</code></dt>
+<dd>
+<div class="desc"><p>Destroy's popupWindow once the person clicks "Ok"</p></div>
+<details class="source">
+<summary>
+<span>Expand source code</span>
+</summary>
+<pre><code class="python">def cleanup(self) -&gt; None:
+    &#34;&#34;&#34;
+    Destroy&#39;s popupWindow once the person clicks &#34;Ok&#34;
+    &#34;&#34;&#34;
+    if self.e is not None:
+        self.value = self.e.get()
+    self.window.destroy()</code></pre>
+</details>
+</dd>
+</dl>
+</dd>
+</dl>
+</section>
+</article>
+<nav id="sidebar">
+<h1>Index</h1>
+<div class="toc">
+<ul></ul>
+</div>
+<ul id="index">
+<li><h3><a href="#header-classes">Classes</a></h3>
+<ul>
+<li>
+<h4><code><a title="main.Body" href="#main.Body">Body</a></code></h4>
+<ul class="two-column">
+<li><code><a title="main.Body.get_text_entry" href="#main.Body.get_text_entry">get_text_entry</a></code></li>
+<li><code><a title="main.Body.insert_user" href="#main.Body.insert_user">insert_user</a></code></li>
+<li><code><a title="main.Body.node_select" href="#main.Body.node_select">node_select</a></code></li>
+<li><code><a title="main.Body.populate_msg" href="#main.Body.populate_msg">populate_msg</a></code></li>
+<li><code><a title="main.Body.reset_main" href="#main.Body.reset_main">reset_main</a></code></li>
+<li><code><a title="main.Body.set_text_entry" href="#main.Body.set_text_entry">set_text_entry</a></code></li>
+<li><code><a title="main.Body.set_users" href="#main.Body.set_users">set_users</a></code></li>
+</ul>
+</li>
+<li>
+<h4><code><a title="main.Footer" href="#main.Footer">Footer</a></code></h4>
+<ul class="">
+<li><code><a title="main.Footer.add_click" href="#main.Footer.add_click">add_click</a></code></li>
+<li><code><a title="main.Footer.send_click" href="#main.Footer.send_click">send_click</a></code></li>
+</ul>
+</li>
+<li>
+<h4><code><a title="main.MainApp" href="#main.MainApp">MainApp</a></code></h4>
+<ul class="">
+<li><code><a title="main.MainApp.add_user" href="#main.MainApp.add_user">add_user</a></code></li>
+<li><code><a title="main.MainApp.send_message" href="#main.MainApp.send_message">send_message</a></code></li>
+</ul>
+</li>
+<li>
+<h4><code><a title="main.popupWindow" href="#main.popupWindow">popupWindow</a></code></h4>
+<ul class="">
+<li><code><a title="main.popupWindow.cleanup" href="#main.popupWindow.cleanup">cleanup</a></code></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</nav>
+</main>
+<footer id="footer">
+<p>Generated by <a href="https://pdoc3.github.io/pdoc"><cite>pdoc</cite> 0.9.2</a>.</p>
+</footer>
+</body>
+</html>
