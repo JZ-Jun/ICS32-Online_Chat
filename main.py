@@ -65,6 +65,7 @@ class Body(tk.Frame):
         :param user: person clicked on by node_select
         :type user: str
         """
+        #adopted from stackoverflow (check README for citation)
         #configures message_frame to 'normal' so we can edit the Text frame
         self.message_frame.configure(state='normal')
         
@@ -101,7 +102,7 @@ class Body(tk.Frame):
         :param text: string of entry
         :type text: str
 
-        .. note:: This method is usefule for clearing the widget
+        .. note:: This method is usefull for clearing the widget
         """
         self.entry_editor.delete('1.0', 'end')
         self.entry_editor.insert('1.0', text)
@@ -249,6 +250,7 @@ class popupWindow:
     The popupWindow class generates a Toplevel pop-up window that allows
     users to add new people to direct message.
     """
+    #adopted from stackoverflow (check README for citation)
     def __init__(self, root):
         """
         Constructs all the necessary attributes for popupWindow object
@@ -296,6 +298,8 @@ class MainApp(tk.Frame):
         except DSUProtocolError as dse:
             print('sorry mate, looks like ya broke it :)')
             self._errorMessage() #pop-up window telling user the error from server.
+        except Exception as e:
+            print(e)
 
 
     def add_user(self) -> None:
@@ -309,7 +313,7 @@ class MainApp(tk.Frame):
         self.root.wait_window(self.w.window)
         self.footer.new_user.configure(state='normal')
 
-        if self.w.value is not None:
+        if self.w.value is not None and self.w.value !="":
             self.body.insert_user(self.w.value)
 
         
@@ -319,8 +323,9 @@ class MainApp(tk.Frame):
         """
         if self.body.sender is not None: #makes sure a node is selected (recipient)
             message = self.body.get_text_entry()
-            if not self.dm.send(message, self.body.sender):
-                self._errorMessage() #pop-up window telling user the error from server.
+            if message != "": #checks if user put something into the entry_editor
+                if not self.dm.send(message, self.body.sender):
+                    self._errorMessage() #pop-up window telling user the error from server.
             
 
     def _errorMessage(self) -> None:
