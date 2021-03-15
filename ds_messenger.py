@@ -1,6 +1,6 @@
 import socket
 import json, time
-from collections import namedtuple
+
 
 class DSUProtocolError(Exception):
     """
@@ -129,32 +129,35 @@ class DirectMessenger:
         :return: true if message successfully sent, false if send failed.
         :rtype: bool
         """
-        #establishes connection and sends a join message for token
-        self.connect()
-        self.join()
-        
-        dm = DirectMessage()
-        dm.set_recipient(recipient)
-        dm.set_message(message)
+        try:
+            #establishes connection and sends a join message for token
+            self.connect()
+            self.join()
+            
+            dm = DirectMessage()
+            dm.set_recipient(recipient)
+            dm.set_message(message)
 
-        x = {
-            "token": self.token,
-            "directmessage": {
-                "entry": dm.get_message(),
-                "recipient": dm.get_recipient(),
-                "timestamp": dm.get_time()
+            x = {
+                "token": self.token,
+                "directmessage": {
+                    "entry": dm.get_message(),
+                    "recipient": dm.get_recipient(),
+                    "timestamp": dm.get_time()
+                    }
                 }
-            }
-        send_msg = json.dumps(x)
-        self.writeCom(send_msg)
-        resp = self.response()
-        #disconnects from the server (closes sockets)
-        self.disconnect()
-        
-        if resp["response"]["type"] == 'ok':
-            return True
-        else:
-            return False
+            send_msg = json.dumps(x)
+            self.writeCom(send_msg)
+            resp = self.response()
+            #disconnects from the server (closes sockets)
+            self.disconnect()
+            
+            if resp["response"]["type"] == 'ok':
+                return True
+            else:
+                return False
+        except DSUProtocolError as dse:
+            print(dse)
 
 
     def retrieve_new(self) -> list:
@@ -164,31 +167,34 @@ class DirectMessenger:
         :return: returns a list of DirectMessage objects containing all new messages
         :rtype: list
         """
-        #establishes connection and sends a join message for token
-        self.connect()
-        self.join()
-        response_list = []
+        try:
+            #establishes connection and sends a join message for token
+            self.connect()
+            self.join()
+            response_list = []
 
-        x = {
-            "token": self.token,
-            "directmessage": "new"
-            }
-        retrieve_msg = json.dumps(x)
-        self.writeCom(retrieve_msg)
-        resp = self.response()
+            x = {
+                "token": self.token,
+                "directmessage": "new"
+                }
+            retrieve_msg = json.dumps(x)
+            self.writeCom(retrieve_msg)
+            resp = self.response()
 
-        #loops through response list and creates DirectMessage objects with provide attr
-        for msgs in resp["response"]["messages"]:
-            dm = DirectMessage()
-            dm.set_message(msgs["message"])
-            dm.set_recipient(msgs["from"])
-            dm.set_time(msgs["timestamp"])
+            #loops through response list and creates DirectMessage objects with provide attr
+            for msgs in resp["response"]["messages"]:
+                dm = DirectMessage()
+                dm.set_message(msgs["message"])
+                dm.set_recipient(msgs["from"])
+                dm.set_time(msgs["timestamp"])
 
-            response_list.append(dm)
+                response_list.append(dm)
 
-        #disconnects from the server (closes sockets)
-        self.disconnect()
-        return response_list
+            #disconnects from the server (closes sockets)
+            self.disconnect()
+            return response_list
+        except DSUProtocolError as dse:
+            print(dse)
             
         
  
@@ -199,51 +205,59 @@ class DirectMessenger:
         :return: returns a list of DirectMessage objects containing all messages
         :rtype: list
         """
-        #establishes connection and sends a join message for token
-        self.connect()
-        self.join()
-        response_list = []
+        try:
+            #establishes connection and sends a join message for token
+            self.connect()
+            self.join()
+            response_list = []
 
-        x = {
-            "token": self.token,
-            "directmessage": "all"
-            }
-        retrieve_msg = json.dumps(x)
-        self.writeCom(retrieve_msg)
-        resp = self.response()
+            x = {
+                "token": self.token,
+                "directmessage": "all"
+                }
+            retrieve_msg = json.dumps(x)
+            self.writeCom(retrieve_msg)
+            resp = self.response()
 
-        #loops through response list and creates DirectMessage objects with provide attr
-        for msgs in resp["response"]["messages"]:
-            dm = DirectMessage()
-            dm.set_message(msgs["message"])
-            dm.set_recipient(msgs["from"])
-            dm.set_time(msgs["timestamp"])
+            #loops through response list and creates DirectMessage objects with provide attr
+            for msgs in resp["response"]["messages"]:
+                dm = DirectMessage()
+                dm.set_message(msgs["message"])
+                dm.set_recipient(msgs["from"])
+                dm.set_time(msgs["timestamp"])
 
-            response_list.append(dm)
+                response_list.append(dm)
 
-        #disconnects from the server (closes sockets)
-        self.disconnect()
-        return response_list
-        
+            #disconnects from the server (closes sockets)
+            self.disconnect()
+            return response_list
+        except DSUProtocolError as dse:
+            print(dse)
+
 
     def join(self) -> None:
         """
         Sends a join message to the DS Server to get the token for retrieve, send functions.
-        """
-        x = {
-            "join": {
-                "username": self.username,
-                "password": self.password,
-                "token": ""
-                }
-            }
-        join_msg = json.dumps(x)
-        self.writeCom(join_msg)
-        resp = self.response()
 
-        #makes sure a response is given from the server
-        if resp is not None:
-            self.token = resp["response"]["token"]
+        :raises DSUProtocolError: custom error for failed connections
+        """
+        try:
+            x = {
+                "join": {
+                    "username": self.username,
+                    "password": self.password,
+                    "token": ""
+                    }
+                }
+            join_msg = json.dumps(x)
+            self.writeCom(join_msg)
+            resp = self.response()
+
+            #makes sure a response is given from the server
+            if resp is not None:
+                self.token = resp["response"]["token"]
+        except:
+            raise DSUProtocolError("an error occurred while connecting")
         
 
     def connect(self) -> None:
@@ -259,7 +273,7 @@ class DirectMessenger:
             self.f_send = sock.makefile('w')
             self.f_recv = sock.makefile('r')
         except:
-            raise DSUProtocolError
+            raise DSUProtocolError("an error occurred while connecting")
 
 
     def disconnect(self) -> None:
@@ -282,7 +296,7 @@ class DirectMessenger:
             self.f_send.write(msg + '\n')
             self.f_send.flush()
         except:
-            raise DSUProtocolError
+            raise DSUProtocolError("an error occurred while connecting")
 
 
     def response(self) -> dict:
@@ -293,30 +307,32 @@ class DirectMessenger:
         :return: dictionary conversion of json message response
         :rtype: dict
         """
-        resp = self.f_recv.readline()[:-1]
+        try: 
+            resp = self.f_recv.readline()[:-1]
 
-        self.resp_msg = json.loads(resp)
+            self.resp_msg = json.loads(resp)
 
-        #prints response to the console
-        if "message" in self.resp_msg["response"]:
-            print(self.resp_msg["response"]["message"])
-        elif len(self.resp_msg["response"]["messages"]) > 1:
-            #only shows the last message (for simplicity in console)
-            print('...', self.resp_msg["response"]["messages"][-1])
-        else:
-            print(self.resp_msg["response"]["messages"])
+            #prints response to the console
+            if "message" in self.resp_msg["response"]:
+                print(self.resp_msg["response"]["message"])
+            elif len(self.resp_msg["response"]["messages"]) > 1:
+                #only shows the last message (for simplicity in console)
+                print('...', self.resp_msg["response"]["messages"][-1])
+            else:
+                print(self.resp_msg["response"]["messages"])
 
-        if self.resp_msg["response"]["type"] == 'error':
+            if self.resp_msg["response"]["type"] == 'error':
 
-            #print(self.resp_msg["response"]["message"])
-            self.disconnect()
-            raise DSUProtocolError
-        else:
-            return self.resp_msg
+                #print(self.resp_msg["response"]["message"])
+                self.disconnect()
+                raise DSUProtocolError
+            else:
+                return self.resp_msg
+        except:
+            raise DSUProtocolError("an error occurred while connecting")
 
 """
 Practice Test
--------------
 if __name__ == '__main__':
     dm1 = DirectMessenger('168.235.86.101', 'harry123123', '123')
     dm1.send('ok then', 'abigail9009')
